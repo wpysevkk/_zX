@@ -1,0 +1,903 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>正星</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="http//www.css3china.com/wp-content/iconfont/demo.html">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+    .container{
+        margin-top: 20px;
+    }
+ 
+.box {
+	margin:0;
+	overflow:hidden;
+        margin-top:0px;
+	width:100%;;
+	height:800px;;
+	cursor:none;
+	background:black;
+	background:linear-gradient(to bottom,#000000 0%,#191970 100%);
+}
+.box_2{
+    margin:0;
+	overflow:hidden;
+        margin-top:0px;
+	width:100%;;
+	height:800px;;
+	cursor:none;
+	background:black;
+	
+}
+
+.filter {
+	width:100%;
+	height:100%;
+	position:absolute;
+        margin-top: 1000px;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0);
+	animation:colorChange 30s ease-in-out infinite;
+	animation-fill-mode:both;
+	mix-blend-mode:overlay;
+}
+@keyframes colorChange {
+	0%,100% {
+	opacity:0;
+}
+50% {
+	opacity:.9;
+}
+}.landscape {
+	position:absolute;
+	bottom:-750px;
+	left:0;
+	width:100%;
+	height:100%;
+        background-image:url('picture/paobuji.png');
+        background-size:600px 500px;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+
+
+        #canvas1 {
+            position: absolute;
+            left: 200px;
+            top: 800px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+         #canvas11 {
+            position: absolute;
+            left: 150px;
+            top: 800px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+        #canvas12 {
+            position: absolute;
+            left: 100px;
+            top: 900px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+  #canvas2 {
+            position: absolute;
+            left: 200px;
+            top: 1000px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas21 {
+            position: absolute;
+            left:130px;
+            top: 1000px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:200px ;height:200px;
+        }
+        #canvas22 {
+            position: absolute;
+            left: 100px;
+            top: 1100px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+         #canvas3 {
+            position: absolute;
+            left: 200px;
+            top: 1200px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas31 {
+            position: absolute;
+            left:90px;
+            top: 1200px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:300px ;height:200px;
+        }
+        #canvas32 {
+            position: absolute;
+            left: 100px;
+            top: 1350px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+    #canvas4 {
+            position: absolute;
+            left: 500px;
+            top: 1000px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas41 {
+            position: absolute;
+            left:900px;
+            top:1000px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:400px ;height:200px;
+        }
+        #canvas42 {
+            position: absolute;
+            left: 900px;
+            top: 1105px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+        #canvas5 {
+            position: absolute;
+            left: 800px;
+            top:700px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas51 {
+            position: absolute;
+            left:1200px;
+            top: 800px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:500px ;height:200px;
+        }
+        #canvas52 {
+            position: absolute;
+            left: 1200px;
+            top: 900px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+        #canvas6 {
+            position: absolute;
+            left: 800px;
+            top: 800px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas61 {
+            position: absolute;
+            left:1200px;
+            top: 950px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:300px ;height:200px;
+        }
+        #canvas62 {
+            position: absolute;
+            left:1200px;
+            top: 1030px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+        #canvas7 {
+            position: absolute;
+            left: 800px;
+            top: 1000px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+           
+            color:#FFFFFF;
+            width:600px ;height:200px;
+        }
+        #canvas71 {
+            position: absolute;
+            left:1200px;
+            top: 1100px;
+            margin: 20px;
+            background: rgba(0,0,0,0);
+            width:300px ;height:200px;
+        }
+        #canvas72 {
+            position: absolute;
+            left: 1200px;
+            top: 1200px;
+            background: rgba(0,0,0,0);
+           size:20px;
+            color:#FFFFFF;
+            width:200px ;height:200px;
+        }
+</style>
+</head>
+<body >
+     <!-- 导航条 -->
+ <div class="container">
+    <div class="row" >
+        <div class="col-md-7">
+             <img src="picture/zhengxing_logo.jpg" style="width:195px;height:45px;">
+        </div>
+        <div class="col-md-5" >
+       <ul class="nav nav-tabs">
+	<li><a href="#"style="background:#FFFFFF;color:#000000;">网站首页</a></li>
+	<li><a href="#"style="background:#FFFFFF;color:#000000;">产品中心</a></li>
+	<li><a href="#"style="background:#FFFFFF;color:#000000;">关于正星</a></li>
+        <li><a href="#"style="background:#FFFFFF;color:#000000;">服务与支持</a></li> 
+        </ul>
+           </div>
+    </div>
+      </div>
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+               <ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+	       </ol> 
+       <!-- 轮播（Carousel）项目 -->
+       <div class="carousel-inner" style="margin-left:auto;">
+		<div class="item active">
+			<img src="picture/01.png" alt="First slide">	
+		</div>
+		<div class="item">
+			<img src="picture/02.jpg" alt="Second slide">
+		</div>
+		<div class="item">
+			<img src="picture/03.png" alt="Third slide">
+		</div>
+           <div class="item">
+			<img src="picture/04.png" alt="Fourth slide">
+		</div>
+            <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" style="background:rgba(0,0,0,0);" 
+	   data-slide="prev"></a>
+	<a class="carousel-control right" href="#myCarousel" style="background:rgba(0,0,0,0);" 
+        data-slide="next"></i>;
+    </a>
+           </div>
+		</div>
+       <!-- 漫天星 -->
+   
+    <div class="box">
+<div class="landscape"></div>
+<div class="filter"></div>
+<p style="color:#FFFFFF;font-size: 25px;margin-left: 600px;margin-top: 80px;">细节源于匠心，细节更是呵护</p>
+<p style="color:#FFFFFF;font-size: 11px;margin-left: 600px;">THE DETAILS FROM THE INGENUITY,DETAILS IS MORE CARE</p>
+<canvas id="canvas_00"></canvas>
+
+<canvas id="canvas1">
+</canvas>
+<canvas id="canvas11">
+    <img id="_11" src="picture/jiaoliu.png"/>
+   
+</canvas>
+<canvas id="canvas12"> 
+</canvas>
+
+<canvas id="canvas2">
+</canvas>
+<canvas id="canvas21">
+     <img id="_21" src="picture/changjing.png"/>
+</canvas>
+<canvas id="canvas22"> 
+</canvas>
+<canvas id="canvas3">
+</canvas>
+<canvas id="canvas31">
+     <img id="_31" src="picture/big data.png"/>
+</canvas>
+<canvas id="canvas32"> 
+</canvas>
+<canvas id="canvas4">
+    
+</canvas>
+
+<canvas id="canvas41">
+     <img id="_41" src="picture/lanya.png"/>
+</canvas>
+<canvas id="canvas42"> 
+</canvas>
+<canvas id="canvas5">
+</canvas>
+<canvas id="canvas51">
+    <img id="_51" src="picture/pad.png"/>
+</canvas>
+<canvas id="canvas52"> 
+</canvas>
+<canvas id="canvas6">
+</canvas>
+<canvas id="canvas61">
+    <img id="_61" src="picture/TV.png"/>
+</canvas>
+<canvas id="canvas62"> 
+</canvas>
+<canvas id="canvas7">
+</canvas>
+<canvas id="canvas71">
+    <img id="_71" src="picture/iphone.png"/>
+</canvas>
+<canvas id="canvas72"> 
+</canvas>
+    </div>
+
+   
+<div class="container" style="width:100%;background:#00C5CD;margin-top: 0px;">
+     <div class="row" >
+                 <div class="col-md-5" >
+                     
+    <img class="F_00" src="picture/kezhedie.png"style="padding-left:150px;padding-top: 20px;padding-right: 0px;width:400px;height:400px;display: none">
+                     
+    <script>
+       $(function(){
+  $(window).scroll(function() {
+    if($(window).scrollTop() >=1000){ //向下滚动像素大于这个值时，即出现浮窗~
+      $('.F_00').fadeIn(300); //浮窗淡入的时间，越小出现的越快~
+    }else{
+      $('.F_00').fadeOut(300); //浮窗淡出的时间，越小消失的越快~
+    }
+  });
+  $('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);}); //浮窗动画停留时间，越小消失的越快~
+});
+ 
+        
+    </script>
+                 </div>
+         <div class="col-md-7" style="padding-top:100px;padding-bottom: 50px;color:#FFFFFF" >
+             <p id="F_01" style="font-size:30px;" >专业生产设备</p>
+             <p id="F_02" >Professional production equipment</p>
+             <p id="F_03" >1.公司拥有专业的生产设备世界领先的美国IPG 3D激光切割机，日本OTC自动焊接机，美国哈斯CNC加工中心等，同时还自主设计打造了一条国内领先水平的自动组装生产线。
+</p>
+             <p id="F_04" >2.多重质量保障：公司拥有自己内部的检测中心，设备齐全，管理完善。同时我们的所有的产品通过国家体育用品质量监督检测中心检验，中国商品进出口检验检疫局检测，欧盟的认证。中国财产保险公司承担产品责任险。</p>
+             <p id="F_05" >3.浙江正星拥有一批热爱运动，热爱工作，热爱生活，拥有知识力量的研发、管理、生产、服务高素质团队。</p>
+             <a href="http://www.zxch.com/about.html"style="color:#FFFFFF">LEARN MORE</a>
+             <a href="http://www.zxch.com/about.html"style="color:#FFFFFF"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
+         </div>
+         
+     </div></div>
+   
+<script>
+    
+    
+   
+    var canvas = document.getElementById("canvas1");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(20, 50);
+				//定义中间点坐标1
+				ctx.lineTo(60, 50);
+				//定义中间点坐标2
+				ctx.lineTo(60, 90);
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(150, 90);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                  var canvas = document.getElementById("canvas11");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_11");
+                        ctx.drawImage(img,10,10,100,60);
+                    }
+var canvas = document.getElementById("canvas12");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("运动社交", 50, 50);
+}
+
+    var canvas = document.getElementById("canvas2");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(20, 50);
+				//定义中间点坐标1
+				ctx.lineTo(60, 50);
+				
+				
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(130, 80);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                          var canvas = document.getElementById("canvas21");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_21");
+                        ctx.drawImage(img,10,10,100,60);
+                    }
+                    var canvas = document.getElementById("canvas22");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("场景模拟", 50, 50);
+}
+
+var canvas = document.getElementById("canvas3");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(20, 50);
+				//定义中间点坐标1
+				ctx.lineTo(60, 50);
+				
+				
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(130, 30);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+ var canvas = document.getElementById("canvas31");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_31");
+                        ctx.drawImage(img,10,10,100,100);
+                    }
+                    var canvas = document.getElementById("canvas32");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("数据连接", 50, 50);
+}
+                    var canvas = document.getElementById("canvas4");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(100, 50);
+				//定义中间点坐标1
+				ctx.lineTo(120, 50);
+				
+				
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(200, 100);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                         
+                    var canvas = document.getElementById("canvas41");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_41");
+                        ctx.drawImage(img,10,10,50,50);
+                    }     
+                    var canvas = document.getElementById("canvas42");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("蓝牙", 50, 50);
+}
+var canvas = document.getElementById("canvas5");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(100, 130);
+				//定义中间点坐标1
+				ctx.lineTo(150, 100);
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(200, 100);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                        
+                        var canvas = document.getElementById("canvas51");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_51");
+                        ctx.drawImage(img,20,10,50,50);
+                    }    
+                        var canvas = document.getElementById("canvas52");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("平板电脑", 50, 50);
+}
+                        var canvas = document.getElementById("canvas6");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(100, 150);
+				//定义中间点坐标1
+				ctx.lineTo(200, 150);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                        var canvas = document.getElementById("canvas61");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_61");
+                        ctx.drawImage(img,20,10,50,50);
+                    }    
+                    var canvas = document.getElementById("canvas62");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("电视", 50, 50);
+}
+                        var canvas = document.getElementById("canvas7");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d");
+				//开始一个新的绘制路径
+				ctx.beginPath();
+				//设置线条颜色为蓝色
+				ctx.strokeStyle = "white";
+				//设置路径起点坐标
+				ctx.moveTo(100, 50);
+				//定义中间点坐标1
+				ctx.lineTo(120, 80);
+				
+				
+				//定义中间点坐标3(这是最后一个中间点，也就是终点)
+				ctx.lineTo(200, 80);
+				//按照绘制路径顺序连接各个坐标点
+				ctx.stroke();
+				//关闭绘制路径
+				ctx.closePath();
+			}
+                        var canvas = document.getElementById("canvas71");
+			if(canvas.getContext){
+				//获取对应的CanvasRenderingContext2D对象(画笔)
+				var ctx = canvas.getContext("2d"); 
+                                var img=document.getElementById("_71");
+                        ctx.drawImage(img,20,10,50,50);
+                    }    
+                 var canvas = document.getElementById("canvas72");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+if(canvas.getContext){  
+    //获取对应的CanvasRenderingContext2D对象(画笔)
+    var ctx = canvas.getContext("2d");
+    
+    //设置字体样式
+    ctx.font = "30px Courier New";
+    //设置字体填充颜色
+    ctx.fillStyle = "white";
+    //从坐标点(50,50)开始绘制文字
+    ctx.fillText("手机", 50, 50);
+}       
+                        
+function Star(id, x, y){
+	this.id = id;
+	this.x = x;
+	this.y = y;
+	this.r = Math.floor(Math.random()*2)+1;
+	var alpha = (Math.floor(Math.random()*10)+1)/10/2;
+	this.color = "rgba(255,255,255,"+alpha+")";
+}
+
+Star.prototype.draw = function() {
+	ctx.fillStyle = this.color;
+	ctx.shadowBlur = this.r * 2;
+	ctx.beginPath();
+	ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+	ctx.closePath();
+	ctx.fill();
+}
+
+Star.prototype.move = function() {
+	this.y -= .15;
+	if (this.y <= -10) this.y = HEIGHT + 10;
+	this.draw();
+}
+
+Star.prototype.die = function() {
+    stars[this.id] = null;
+    delete stars[this.id];
+}
+
+
+function Dot(id, x, y, r) {
+	this.id = id;
+	this.x = x;
+	this.y = y;
+	this.r = Math.floor(Math.random()*5)+1;
+	this.maxLinks = 2;
+	this.speed = .9;
+	this.a = .5;
+	this.aReduction = .005;
+	this.color = "rgba(255,255,255,"+this.a+")";
+	this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+
+	this.dir = Math.floor(Math.random()*140)+200;
+}
+
+Dot.prototype.draw = function() {
+	ctx.fillStyle = this.color;
+	ctx.shadowBlur = this.r * 2;
+	ctx.beginPath();
+	ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+	ctx.closePath();
+	ctx.fill();
+}
+
+Dot.prototype.link = function() {
+	if (this.id == 0) return;
+	var previousDot1 = getPreviousDot(this.id, 1);
+	var previousDot2 = getPreviousDot(this.id, 2);
+	var previousDot3 = getPreviousDot(this.id, 3);
+	if (!previousDot1) return;
+	ctx.strokeStyle = this.linkColor;
+	ctx.moveTo(previousDot1.x, previousDot1.y);
+	ctx.beginPath();
+	ctx.lineTo(this.x, this.y);
+	if (previousDot2 != false) ctx.lineTo(previousDot2.x, previousDot2.y);
+	if (previousDot3 != false) ctx.lineTo(previousDot3.x, previousDot3.y);
+	ctx.stroke();
+	ctx.closePath();
+}
+
+function getPreviousDot(id, stepback) {
+	if (id == 0 || id - stepback < 0) return false;
+	if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+	else return false;//getPreviousDot(id - stepback);
+}
+
+Dot.prototype.move = function() {
+	this.a -= this.aReduction;
+	if (this.a <= 0) {
+		this.die();
+		return
+	}
+	this.color = "rgba(255,255,255,"+this.a+")";
+	this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+	this.x = this.x + Math.cos(degToRad(this.dir))*this.speed,
+	this.y = this.y + Math.sin(degToRad(this.dir))*this.speed;
+
+	this.draw();
+	this.link();
+}
+
+Dot.prototype.die = function() {
+    dots[this.id] = null;
+    delete dots[this.id];
+}
+
+
+var canvas_0  = document.getElementById('canvas_00'),
+	ctx = canvas_0.getContext('2d'),
+	WIDTH,
+	HEIGHT,
+	mouseMoving = false,
+	mouseMoveChecker,
+	mouseX,
+	mouseY,
+	stars = [],
+	initStarsPopulation = 200,
+	dots = [],
+	dotsMinDist = 2,
+	maxDistFromCursor = 50;
+
+setCanvasSize();
+init();
+
+function setCanvasSize() {
+	WIDTH = document.documentElement.clientWidth,
+    HEIGHT = document.documentElement.clientHeight;                      
+
+	canvas_0.setAttribute("width", WIDTH);
+	canvas_0.setAttribute("height", HEIGHT);
+        
+}
+
+function init() {
+	ctx.strokeStyle = "white";
+	ctx.shadowColor = "white";
+	for (var i = 0; i < initStarsPopulation; i++) {
+		stars[i] = new Star(i, Math.floor(Math.random()*WIDTH), Math.floor(Math.random()*HEIGHT));
+		//stars[i].draw();
+	}
+	ctx.shadowBlur = 0;
+	animate();
+        
+}
+
+function animate() {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+    for (var i in stars) {
+    	stars[i].move();
+    }
+    for (var i in dots) {
+    	dots[i].move();
+    }
+    drawIfMouseMoving();
+    requestAnimationFrame(animate);
+}
+
+window.onmousemove = function(e){
+	mouseMoving = true;
+	mouseX = e.clientX;
+	mouseY = e.clientY;
+	clearInterval(mouseMoveChecker);
+	mouseMoveChecker = setTimeout(function() {
+		mouseMoving = false;
+	}, 100);
+}
+
+
+function drawIfMouseMoving(){
+	if (!mouseMoving) return;
+
+	if (dots.length == 0) {
+		dots[0] = new Dot(0, mouseX, mouseY);
+		dots[0].draw();
+		return;
+	}
+
+	var previousDot = getPreviousDot(dots.length, 1);
+	var prevX = previousDot.x; 
+	var prevY = previousDot.y; 
+
+	var diffX = Math.abs(prevX - mouseX);
+	var diffY = Math.abs(prevY - mouseY);
+
+	if (diffX < dotsMinDist || diffY < dotsMinDist) return;
+
+	var xVariation = Math.random() > .5 ? -1 : 1;
+	xVariation = xVariation*Math.floor(Math.random()*maxDistFromCursor)+1;
+	var yVariation = Math.random() > .5 ? -1 : 1;
+	yVariation = yVariation*Math.floor(Math.random()*maxDistFromCursor)+1;
+	dots[dots.length] = new Dot(dots.length, mouseX+xVariation, mouseY+yVariation);
+	dots[dots.length-1].draw();
+	dots[dots.length-1].link();
+}
+//setInterval(drawIfMouseMoving, 17);
+
+function degToRad(deg) {
+	return deg * (Math.PI / 180);
+}
+
+
+
+		
+		
+		
+            
+</script>
+
+
+</div>
+</body>
+</html>
+
+
